@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route,Routes } from "react-router-dom"
+import { Box } from "@mui/material"
+import Navbar from "./Components/Navbar"
+import Home from "./Pages/Home"
+import Exercise from "./Pages/Exercise"
+import Footer from "./Components/Footer"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className='bg-black text-white'>
-hello hi there
-      </div>
-    </>
+<Box className="w-440px">
+  <Navbar/>
+  <Routes>
+<Route path='/' component={<Home/>}/>
+<Route path='/exercise.:id' component={<Exercise/>}/>
+</Routes>
+<Footer/>
+</Box>
   )
 }
 
