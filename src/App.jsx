@@ -8,11 +8,11 @@ import Footer from "./Components/Footer"
 function App() {
 
   return (
-<Box className="w-440px">
+<Box className="w-440px m-auto xl:w-[1488px]">
   <Navbar/>
   <Routes>
-<Route path='/' component={<Home/>}/>
-<Route path='/exercise.:id' component={<Exercise/>}/>
+<Route path='/' element={<Home/>}/>
+<Route path='/exercise.:id' element={<Exercise/>}/>
 </Routes>
 <Footer/>
 </Box>
