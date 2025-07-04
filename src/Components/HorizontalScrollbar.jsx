@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './Bodypart';
-import RightArrowIcon from '../assets/icons/right-arrow.png';
+
 
 
 const LeftArrow = () => {
