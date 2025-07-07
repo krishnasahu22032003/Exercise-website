@@ -59,12 +59,13 @@
 }
 
 .hero-banner-img {
+  border-radius: 60px;
   position: absolute;
   right: 40px;
   top: 0px;
-  width: 700px;
-  height: 900px;
-  margin-top: -330px;
+  width: 600px;
+  height: 700px;
+  margin-top: -230px;
 
 }
 
