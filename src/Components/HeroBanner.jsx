@@ -22,10 +22,10 @@ const HeroBanner = () => {
       .from(headingRef.current, { y: 40, opacity: 0 }, '-=0.6')
       .from(subtextRef.current, { y: 30, opacity: 0 }, '-=0.5')
       .fromTo(
-  buttonRef.current,
-  { scale: 0.8, opacity: 0 },
-  { scale: 1, opacity: 1, duration: 0.5 }
-)
+        buttonRef.current,
+        { scale: 0.8, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5 }
+      )
       .from(imageRef.current, { x: 100, opacity: 0 }, '-=1');
 
   }, { scope: bannerRef });
@@ -33,7 +33,7 @@ const HeroBanner = () => {
   return (
     <div
       ref={bannerRef}
-      className="relative px-5 sm:px-10 mt-[70px] sm:mt-[100px] lg:mt-[120px] max-w-[1440px] mx-auto"
+      className="relative px-5 sm:px-10 mt-[70px] sm:mt-[100px] lg:mt-[120px] max-w-[1440px] mx-auto pb-[80px]"
     >
       {/* Brand Label */}
       <p
@@ -64,19 +64,20 @@ const HeroBanner = () => {
         <a
           ref={buttonRef}
           href="#exercises"
-          className="inline-block w-[220px] text-center bg-gradient-to-r from-[#FF3C3C] via-[#B22222] to-[#1B1B1B] text-white hover:from-[#FF2625] hover:to-black text-[18px] sm:text-[20px] px-[24px] py-[14px] rounded-full shadow-md hover:shadow-xl transition-all duration-300 font-semibold tracking-wide"
+          className="inline-block w-[220px] text-center bg-gradient-to-r from-[#FF3C3C] via-[#B22222] to-[#1B1B1B] text-white hover:from-[#FF2625] hover:to-black text-[18px] sm:text-[20px] px-[24px] py-[14px] rounded-full shadow-md hover:shadow-xl transition-colors duration-300 font-semibold tracking-wide"
         >
           Explore Exercises
         </a>
       </div>
 
       {/* Background Image */}
-      <img
-        ref={imageRef}
-        src="/images/banner.jpg"
-        alt="hero-banner"
-        className="hidden sm:block absolute right-0 top-0 w-[320px] sm:w-[460px] lg:w-[600px] h-auto rounded-[60px] sm:-mt-[160px] lg:-mt-[230px] z-10 object-cover"
-      />
+<img
+  ref={imageRef}
+  src="/images/banner.jpg"
+  alt="hero-banner"
+  className="hidden sm:block absolute right-0 top-0 w-[320px] sm:w-[460px] lg:w-[600px] max-w-full h-auto rounded-[60px] sm:-mt-[160px] lg:-mt-[230px] z-10 object-cover shadow-xl shadow-black/30"
+/>
+
     </div>
   );
 };
