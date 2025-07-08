@@ -2,6 +2,7 @@
 import Navbar from "./Components/Navbar"
 import HeroBanner from "./Components/HeroBanner"
 import Features from "./Components/Features"
+import Testimonials from "./Components/Testimonials"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
   <Navbar/>
   <HeroBanner />
   <Features/>
-  <TrainingPrograms/>
+  <Testimonials/>
   </div>
 
 
