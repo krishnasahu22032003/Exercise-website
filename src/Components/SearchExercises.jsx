@@ -1,5 +1,4 @@
-
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
@@ -14,48 +13,36 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
         exerciseOptions
       );
+      console.log('✅ Body Parts from API:', bodyPartsData);
       setBodyParts(['all', ...bodyPartsData]);
     };
+
     fetchExercisesData();
   }, []);
 
   const handleSearch = async () => {
     if (search) {
-      console.log('Searching for:', search);
       const exercisesData = await fetchData(
-        'https://exercisedb.p.rapidapi.com/exercises',
+        'https://exercisedb.p.rapidapi.com/exercises?limit=1000',
         exerciseOptions
       );
 
-      const searchedExercises = exercisesData.filter(
-        (item) =>
-          item.name.toLowerCase().includes(search) ||
-          item.target.toLowerCase().includes(search) ||
-          item.equipment.toLowerCase().includes(search) ||
-          item.bodyPart.toLowerCase().includes(search)
+console.log('🧪 Example exercise:', exercisesData[0]);
+      const searchedExercises = exercisesData.filter((item) =>
+        [item.name, item.target, item.equipment, item.bodyPart]
+          .some((field) => field.toLowerCase().includes(search))
       );
 
-      console.log('Matched Exercises:', searchedExercises);
-
-      setExercises(searchedExercises);
       setSearch('');
-
+      setExercises(searchedExercises);
       window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
     }
   };
 
   return (
-    <Stack
-      alignItems="center"
-      justifyContent="center"
-      className="mt-[100px] px-5"
-    >
-      <Typography
-        fontWeight={700}
-        textAlign="center"
-        className="text-[30px] lg:text-[44px] mb-[49px]"
-      >
-        Awesome Exercises You <br /> Should Know
+    <Stack alignItems="center" justifyContent="center" className="mt-[180px] px-5">
+      <Typography fontWeight={700} textAlign="center" className="text-[30px] lg:text-[44px] mb-[49px]">
+        Power-Packed Workouts <br /> You Shouldn’t Miss
       </Typography>
 
       <Box position="relative" className="mb-[72px]">
@@ -90,7 +77,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         </Button>
       </Box>
 
-      <Box className="relative w-full px-5">
+      <Box sx={{ width: '100%', overflowX: 'auto' }}>
         <HorizontalScrollbar
           data={bodyParts}
           bodyParts
