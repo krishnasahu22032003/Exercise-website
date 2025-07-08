@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Box } from '@mui/material';
 
 gsap.registerPlugin(useGSAP);
 
@@ -35,7 +34,7 @@ const HeroBanner = () => {
       ref={bannerRef}
       className="relative px-5 sm:px-10 mt-[70px] sm:mt-[100px] lg:mt-[120px] max-w-[1440px] mx-auto pb-[80px]"
     >
-      {/* Brand Label */}
+
       <p
         ref={brandRef}
         className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF2625] via-[#B22222] to-black font-extrabold uppercase text-[24px] sm:text-[30px] lg:text-[45px] tracking-wider"
@@ -43,7 +42,7 @@ const HeroBanner = () => {
         Athlenix Zone
       </p>
 
-      {/* Main Headline */}
+   
       <h1
         ref={headingRef}
         className="font-extrabold text-[48px] sm:text-[64px] lg:text-[52px] leading-tight mt-[16px] mb-[28px]"
@@ -51,7 +50,7 @@ const HeroBanner = () => {
         Train Hard, Live Strong
       </h1>
 
-      {/* Subtext */}
+
       <p
         ref={subtextRef}
         className="text-[22px] sm:text-[26px] lg:text-[28px] leading-[38px] font-[Alegreya] text-[#444] max-w-[700px]"
@@ -59,7 +58,7 @@ const HeroBanner = () => {
         Discover workouts tailored to your goals — crafted for real results.
       </p>
 
-      {/* CTA Button */}
+
       <div className="mt-[40px]">
         <a
           ref={buttonRef}
@@ -70,7 +69,7 @@ const HeroBanner = () => {
         </a>
       </div>
 
-      {/* Background Image */}
+
 <img
   ref={imageRef}
   src="/images/banner.jpg"

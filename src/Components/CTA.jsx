@@ -12,7 +12,7 @@ const CallToAction = () => {
   useEffect(() => {
     const q = gsap.utils.selector(sectionRef);
 
-    // Reset initial states first
+   
     gsap.set(q(".cta-heading, .cta-subtext, .cta-button"), {
       opacity: 0,
       y: 40,
@@ -22,7 +22,7 @@ const CallToAction = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 80%",
-        once: true, // animate only once
+        once: true,
       },
     });
 

@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animation for section cards
+      
       ScrollTrigger.batch(".testimonial-card", {
         start: "top 85%",
         onEnter: (batch) =>

@@ -42,7 +42,7 @@ const FAQ = () => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Animate heading
+      
       gsap.from(".faq-heading", {
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -54,7 +54,7 @@ const FAQ = () => {
         ease: "power3.out",
       });
 
-      // Animate each FAQ card one-by-one
+     
       cardsRef.current.forEach((card, index) => {
         if (card) {
           gsap.from(card, {

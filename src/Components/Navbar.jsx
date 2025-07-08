@@ -7,9 +7,9 @@ const Navbar = () => (
     alignItems="center"
     className="w-full max-w-[1440px] mx-auto px-6 sm:px-6 mt-[20px] sm:mt-[32px]"
   >
-    {/* Logo + Nav Links together */}
+   
     <div className="flex flex-wrap items-center gap-5 sm:gap-10 text-[18px] sm:text-[24px] font-[Alegreya] text-[#2D0C57]">
-      {/* Logo */}
+ 
       <Link to="/">
         <img
           src="/images/Logo.png"
@@ -18,7 +18,6 @@ const Navbar = () => (
         />
       </Link>
 
-      {/* Nav Links */}
       <Link
         to="/"
         className="no-underline text-transparent bg-clip-text bg-gradient-to-r from-[#FF4D4D] to-[#1B1B1B] transition duration-200"
