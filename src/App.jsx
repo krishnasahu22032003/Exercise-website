@@ -4,6 +4,7 @@ import HeroBanner from "./Components/HeroBanner"
 import Features from "./Components/Features"
 import Testimonials from "./Components/Testimonials"
 import Membership from "./Components/Membership"
+import FAQS from "./Components/FAQS"
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
   <Features/>
   <Testimonials/>
   <Membership/>
+  <FAQS/>
   </div>
 
 
