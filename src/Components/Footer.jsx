@@ -38,7 +38,7 @@ const Footer = () => {
       <div className="max-w-[1240px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-gray-700">
           <div className="footer-item">
-            <h3 className="text-lg font-bold mb-3 text-gray-800">
+            <h3 className="text-[20px] font-bold mb-3 text-gray-800">
               Athlenix Zone
             </h3>
             <p className="text-sm leading-relaxed">
