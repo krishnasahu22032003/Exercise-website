@@ -5,6 +5,7 @@ import Features from "./Components/Features"
 import Testimonials from "./Components/Testimonials"
 import Membership from "./Components/Membership"
 import FAQS from "./Components/FAQS"
+import CTA from "./Components/CTA"
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
   <Testimonials/>
   <Membership/>
   <FAQS/>
+  <CTA/>
   </div>
 
 
